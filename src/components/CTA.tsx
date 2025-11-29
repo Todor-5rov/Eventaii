@@ -1,3 +1,5 @@
+"use client"
+
 export function CTA() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-600 via-secondary-600 to-pink-600 relative overflow-hidden">
