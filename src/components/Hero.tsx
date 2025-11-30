@@ -35,7 +35,7 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="/register-organizer" className="w-full sm:w-auto">
               <button className="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white text-lg font-semibold rounded-xl hover:shadow-2xl hover:scale-105 transition-all">
                 Start Planning Free
@@ -46,26 +46,6 @@ export function Hero() {
                 Register as Vendor
               </button>
             </a>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            <div>
-              <div className="text-4xl font-bold text-gradient mb-2">10K+</div>
-              <div className="text-gray-600">Events Planned</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-gradient mb-2">5K+</div>
-              <div className="text-gray-600">Verified Vendors</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-gradient mb-2">98%</div>
-              <div className="text-gray-600">Success Rate</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-gradient mb-2">2min</div>
-              <div className="text-gray-600">Avg. Match Time</div>
-            </div>
           </div>
         </div>
       </div>

@@ -27,6 +27,7 @@ export function OrganizerForm() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -78,8 +79,20 @@ export function OrganizerForm() {
         typicalEventSize: "",
         eventsPerYear: "",
       });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error submitting form:", error);
+      
+      // Check if it's a connection error
+      if (error?.message?.includes("Failed to fetch") || error?.message?.includes("fetch")) {
+        setErrorMessage(
+          "Cannot connect to database. Please check if Supabase environment variables are configured."
+        );
+      } else if (error?.message) {
+        setErrorMessage(error.message);
+      } else {
+        setErrorMessage("An error occurred. Please try again.");
+      }
+      
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -265,17 +278,18 @@ export function OrganizerForm() {
 
         {submitStatus === "error" && (
           <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg">
-            <div className="flex items-center gap-2 text-red-800">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="font-semibold">
-                Error submitting form. Please try again.
-              </span>
+            <div className="text-red-800">
+              <div className="flex items-center gap-2 mb-2">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span className="font-semibold">Error submitting form</span>
+              </div>
+              <p className="text-sm">{errorMessage || "Please try again."}</p>
             </div>
           </div>
         )}

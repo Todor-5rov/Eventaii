@@ -20,4 +20,20 @@ CREATE INDEX idx_organizers_city ON organizers(city);
 CREATE TRIGGER update_organizers_updated_at BEFORE UPDATE ON organizers
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
+-- Enable Row Level Security
+ALTER TABLE organizers ENABLE ROW LEVEL SECURITY;
+
+-- Policy for organizers - allow anyone to insert (for registration)
+CREATE POLICY "Allow public inserts on organizers"
+ON organizers
+FOR INSERT
+TO anon
+WITH CHECK (true);
+
+-- Policy for organizers - allow users to read their own data
+CREATE POLICY "Allow public reads on organizers"
+ON organizers
+FOR SELECT
+TO anon
+USING (true);
 
