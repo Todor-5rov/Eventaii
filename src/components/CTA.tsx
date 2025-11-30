@@ -15,7 +15,7 @@ export function CTA() {
         </h2>
 
         <p className="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed">
-          Join thousands of organizers and vendors who are already using Eventai
+          Join thousands of organizers and vendors who are already using Eventco
           to create perfect events effortlessly.
         </p>
 

@@ -9,7 +9,7 @@ Your Vercel deployment needs the Supabase environment variables to work properly
 ### Step 1: Go to Vercel Project Settings
 
 1. Go to https://vercel.com/dashboard
-2. Select your project (Eventaii)
+2. Select your project (Eventcoi)
 3. Click on **Settings** tab
 4. Click on **Environment Variables** in the left sidebar
 

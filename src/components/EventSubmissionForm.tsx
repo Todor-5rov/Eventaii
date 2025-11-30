@@ -98,8 +98,9 @@ export function EventSubmissionForm({
 
       // Call n8n webhook with the created event
       try {
-        const webhookUrl = "https://eventai.app.n8n.cloud/webhook-test/abc44e0c-a7de-4340-814e-884d5ac24488";
-        
+        const webhookUrl =
+          "https://Eventco.app.n8n.cloud/webhook-test/abc44e0c-a7de-4340-814e-884d5ac24488";
+
         // Prepare the event data
         const eventData = {
           event_id: data[0].event_id,
@@ -402,4 +403,3 @@ export function EventSubmissionForm({
     </form>
   );
 }
-

@@ -11,7 +11,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-gradient">Eventai</span>
+            <span className="text-2xl font-bold text-gradient">Eventco</span>
           </div>
 
           {/* Desktop Navigation */}

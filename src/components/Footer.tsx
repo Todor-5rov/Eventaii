@@ -36,7 +36,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1">
-            <span className="text-2xl font-bold text-gradient">Eventai</span>
+            <span className="text-2xl font-bold text-gradient">Eventco</span>
             <p className="mt-4 text-sm text-gray-400 leading-relaxed">
               AI-powered event planning marketplace connecting organizers with
               perfect vendors automatically.
@@ -107,7 +107,7 @@ export function Footer() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
-              © {currentYear} Eventai. All rights reserved.
+              © {currentYear} Eventco. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a

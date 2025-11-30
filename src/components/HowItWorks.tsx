@@ -94,7 +94,7 @@ export function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            How <span className="text-gradient">Eventai</span> Works
+            How <span className="text-gradient">Eventco</span> Works
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             From request to confirmation in minutes. Our AI handles everything
