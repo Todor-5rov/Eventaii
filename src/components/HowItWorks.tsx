@@ -98,7 +98,7 @@ export function HowItWorks() {
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             From request to confirmation in minutes. Our AI handles everything
-            so you don't have to.
+            so you don&apos;t have to.
           </p>
         </div>
 

@@ -248,7 +248,8 @@ export function VenueForm() {
                 />
               </svg>
               <span className="font-semibold">
-                Registration successful! We'll review your application soon.
+                Registration successful! We&apos;ll review your application
+                soon.
               </span>
             </div>
           </div>

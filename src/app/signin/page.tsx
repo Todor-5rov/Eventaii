@@ -146,7 +146,7 @@ export default function SignIn() {
             {/* Register Link */}
             <div className="mt-6 text-center">
               <p className="text-gray-600">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <a
                   href="/register-organizer"
                   className="text-primary-600 hover:text-primary-700 font-semibold"
