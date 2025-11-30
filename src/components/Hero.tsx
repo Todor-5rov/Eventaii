@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-secondary-50 -z-10" />
-      
+
       {/* Animated background elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob" />
       <div className="absolute top-40 right-10 w-72 h-72 bg-secondary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000" />
@@ -16,7 +16,9 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 mb-8">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-sm text-gray-600">AI-Powered Event Automation</span>
+            <span className="text-sm text-gray-600">
+              AI-Powered Event Automation
+            </span>
           </div>
 
           {/* Main heading */}
@@ -27,18 +29,23 @@ export function Hero() {
 
           {/* Subheading */}
           <p className="text-xl sm:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Our AI instantly matches you with the best venues, caterers, and tech providers. 
-            No more endless calls and emails. Just perfect events, every time.
+            Our AI instantly matches you with the best venues, caterers, and
+            tech providers. No more endless calls and emails. Just perfect
+            events, every time.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white text-lg font-semibold rounded-xl hover:shadow-2xl hover:scale-105 transition-all">
-              Start Planning Free
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-white text-gray-700 text-lg font-semibold rounded-xl border-2 border-gray-300 hover:border-primary-600 hover:text-primary-600 transition-all">
-              Register as Vendor
-            </button>
+            <a href="/register-organizer" className="w-full sm:w-auto">
+              <button className="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white text-lg font-semibold rounded-xl hover:shadow-2xl hover:scale-105 transition-all">
+                Start Planning Free
+              </button>
+            </a>
+            <a href="/register-vendor" className="w-full sm:w-auto">
+              <button className="w-full px-8 py-4 bg-white text-gray-700 text-lg font-semibold rounded-xl border-2 border-gray-300 hover:border-primary-600 hover:text-primary-600 transition-all">
+                Register as Vendor
+              </button>
+            </a>
           </div>
 
           {/* Stats */}
@@ -65,7 +72,8 @@ export function Hero() {
 
       <style jsx>{`
         @keyframes blob {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0px, 0px) scale(1);
           }
           33% {
@@ -86,6 +94,5 @@ export function Hero() {
         }
       `}</style>
     </section>
-  )
+  );
 }
-

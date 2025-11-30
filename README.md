@@ -1,6 +1,6 @@
-# eventaii - AI-Powered Event Planning Marketplace
+# Eventai - AI-Powered Event Planning Marketplace
 
-A modern landing page for eventaii, an automated event planning marketplace that uses AI to instantly match event organizers with the best venues, caterers, and tech providers.
+A modern landing page for Eventai, an automated event planning marketplace that uses AI to instantly match event organizers with the best venues, caterers, and tech providers.
 
 ## 🚀 Features
 
@@ -43,7 +43,7 @@ npm start
 ## 🎨 Project Structure
 
 ```
-eventaii/
+Eventai/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx          # Root layout with metadata
@@ -144,7 +144,7 @@ This is a private project. Contact the team for contribution guidelines.
 
 ## 📞 Support
 
-For support, email support@eventaii.com or join our Slack channel.
+For support, email support@Eventai.com or join our Slack channel.
 
 ---
 
